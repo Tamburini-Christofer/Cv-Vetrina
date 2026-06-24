@@ -218,7 +218,7 @@ ul {
 
 /* Hero */
 .hero {
-  padding: 10rem 0 5rem;
+  padding: 7.5rem 0 1rem;
 }
 
 .hero-card {
@@ -396,6 +396,16 @@ header {
   color: var(--text-primary);
 }
 
+.education-card-link {
+  display: block;
+  color: inherit;
+  text-decoration: none;
+}
+
+.education-card-link:hover {
+  color: inherit;
+}
+
 .card .meta {
   font-size: 0.85rem;
   color: var(--accent-pink-light);
@@ -506,6 +516,56 @@ header {
   border-radius: 50px;
   font-size: 0.75rem;
   font-weight: 600;
+}
+
+.tech-badge--blue {
+  background: rgba(79, 143, 255, 0.14);
+  color: #a9c8ff;
+}
+
+.tech-badge--green {
+  background: rgba(46, 204, 113, 0.14);
+  color: #9ff0b8;
+}
+
+.tech-badge--teal {
+  background: rgba(45, 212, 191, 0.14);
+  color: #92f0e5;
+}
+
+.tech-badge--purple {
+  background: rgba(139, 92, 246, 0.14);
+  color: #c6b2ff;
+}
+
+.tech-badge--orange {
+  background: rgba(249, 115, 22, 0.16);
+  color: #ffd0a6;
+}
+
+.tech-badge--pink {
+  background: rgba(255, 79, 157, 0.16);
+  color: #ffb0d0;
+}
+
+.tech-badge--gold {
+  background: rgba(245, 197, 66, 0.16);
+  color: #ffe79a;
+}
+
+.tech-badge--cyan {
+  background: rgba(34, 211, 238, 0.14);
+  color: #a8f3ff;
+}
+
+.tech-badge--rose {
+  background: rgba(244, 114, 182, 0.14);
+  color: #ffc0de;
+}
+
+.tech-badge--lime {
+  background: rgba(163, 230, 53, 0.16);
+  color: #e2ff9f;
 }
 
 .projects-repo-count {
@@ -677,12 +737,12 @@ header {
     left: 50%;
     right: auto;
     transform: translateX(-50%);
-    width: min(92vw, 360px);
+    width: min(95vw, 420px);
     flex-direction: column;
     background: rgba(15, 12, 29, 0.95);
-    padding: 0.8rem;
+    padding: 1rem;
     border-bottom: 1px solid var(--border);
-    gap: 0.25rem;
+    gap: 0.5rem;
     align-items: center;
     border-radius: 0 0 12px 12px;
   }
@@ -692,10 +752,19 @@ header {
   }
 
   .nav-links a {
-    padding: 0.7rem 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 48px;
+    padding: 0.85rem 1rem;
     width: 100%;
-    max-width: 280px;
+    max-width: 360px;
     text-align: center;
+    font-size: 1.05rem;
+    font-weight: 600;
+    letter-spacing: 0.02em;
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(255, 255, 255, 0.08);
     border-radius: 10px;
   }
 
@@ -703,8 +772,16 @@ header {
     display: none;
   }
 
+  .nav-links a.active {
+    border-color: rgba(255, 79, 157, 0.45);
+    background: rgba(255, 79, 157, 0.12);
+  }
+
   .nav-toggle {
     display: block;
+    font-size: 2rem;
+    padding: 0.2rem 0.4rem;
+    line-height: 1;
   }
 
   .hero {

@@ -1,6 +1,7 @@
 // Typewriter effect
 const text = 'Junior Frontend Developer';
 const typewriterEl = document.getElementById('typewriter');
+
 let i = 0;
 
 function typeWriter() {
@@ -62,7 +63,9 @@ const sectionObserver = new IntersectionObserver((entries) => {
     if (entry.isIntersecting) {
       const id = entry.target.getAttribute('id');
       navAnchors.forEach((anchor) => {
-        anchor.classList.toggle('active', anchor.getAttribute('href') === `#${id}`);
+        const href = anchor.getAttribute('href') || '';
+        const anchorHash = href.includes('#') ? `#${href.split('#')[1]}` : '';
+        anchor.classList.toggle('active', anchorHash === `#${id}`);
       });
     }
   });

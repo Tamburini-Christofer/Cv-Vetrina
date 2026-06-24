@@ -93,4 +93,25 @@ window.addEventListener('scroll', () => {
 // Start animations after DOM is ready
 document.addEventListener('DOMContentLoaded', () => {
   setTimeout(typeWriter, 400);
+
+  const feedbackForm = document.getElementById('feedback-form');
+  if (!feedbackForm) {
+    return;
+  }
+
+  feedbackForm.addEventListener('submit', (event) => {
+    event.preventDefault();
+
+    const name = document.getElementById('feedback-name')?.value?.trim() || 'Anonimo';
+    const email = document.getElementById('feedback-email')?.value?.trim() || 'Non fornita';
+    const message = document.getElementById('feedback-message')?.value?.trim();
+
+    if (!message) {
+      return;
+    }
+
+    const subject = encodeURIComponent('Nuovo feedback dal CV vetrina');
+    const body = encodeURIComponent(`Nome: ${name}\nEmail: ${email}\n\nCommento:\n${message}`);
+    window.location.href = `mailto:christofer.tamburini92@gmail.com?subject=${subject}&body=${body}`;
+  });
 });

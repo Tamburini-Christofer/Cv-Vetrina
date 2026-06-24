@@ -516,6 +516,53 @@ header {
   color: var(--accent-pink-light);
 }
 
+/* Feedback form */
+.feedback-form {
+  display: grid;
+  gap: 0.7rem;
+}
+
+.feedback-label {
+  font-size: 0.85rem;
+  color: var(--accent-pink-light);
+  font-weight: 600;
+}
+
+.feedback-input,
+.feedback-textarea {
+  width: 100%;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  color: var(--text-primary);
+  padding: 0.75rem 0.85rem;
+  font-size: 0.95rem;
+  font-family: inherit;
+}
+
+.feedback-input::placeholder,
+.feedback-textarea::placeholder {
+  color: var(--text-muted);
+}
+
+.feedback-input:focus,
+.feedback-textarea:focus {
+  outline: none;
+  border-color: rgba(255, 79, 157, 0.5);
+  box-shadow: 0 0 0 3px rgba(255, 79, 157, 0.12);
+}
+
+.feedback-textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+.feedback-actions {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 0.25rem;
+}
+
 /* Certifications list */
 .cert-list {
   display: grid;

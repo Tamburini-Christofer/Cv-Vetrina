@@ -37,6 +37,7 @@ jobs:
           cp cv.html _site/index.html
           cp style.css _site/style.css
           cp script.js _site/script.js
+          cp CV_Tamburini_Christofer.pdf _site/CV_Tamburini_Christofer.pdf
           cp -R public/. _site/public/
 
       - name: Upload artifact

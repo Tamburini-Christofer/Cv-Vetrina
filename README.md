@@ -23,5 +23,4 @@
 ###
 
 ![Lavoro per desktop](./Completato/desktop.png)
-![Lavoro per tablet](./Completato/tablet.png)
 ![Lavoro per smartphone](./Completato/smartphone.png)

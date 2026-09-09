@@ -1,5 +1,5 @@
 // Typewriter effect
-const text = 'Junior Frontend Developer';
+const text = 'Full Stack Developer';
 const typewriterEl = document.getElementById('typewriter');
 
 let i = 0;
